@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/guestbook/index.html</loc>
+    
+    <lastmod>2019-03-31T15:14:44.284Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/03/31/springboot/</loc>
+    
+    <lastmod>2019-03-31T14:52:26.829Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/03/31/hello-world/</loc>
+    
+    <lastmod>2019-03-31T12:24:52.499Z</lastmod>
+    
+  </url>
+  
+</urlset>
