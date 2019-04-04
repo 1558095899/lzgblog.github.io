@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>lzg博客</title>
-  
+  <icon>https://www.gravatar.com/avatar/d4fd5e38623567de9dcc4593668e09db</icon>
   
   <link href="/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>lzg blog</name>
-    
+    <email>1558095899@qq.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
