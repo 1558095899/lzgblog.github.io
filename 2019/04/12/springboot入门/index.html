@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="lzg博客">
 <meta property="og:description" content="1.springboot注解开发">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:updated_time" content="2019-04-12T09:20:37.286Z">
+<meta property="og:updated_time" content="2019-04-12T09:28:30.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springboot 入门(一)">
 <meta name="twitter:description" content="1.springboot注解开发">
@@ -192,7 +192,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">430字</span>
+        <span class="post-count">431字</span>
       </span>
     </span>
 
@@ -213,13 +213,9 @@
       
         <h2 id="1-springboot注解开发"><a href="#1-springboot注解开发" class="headerlink" title="1.springboot注解开发"></a>1.springboot注解开发<a id="more"></a></h2><font size="4"><strong>@SpringBootApplication</strong>  :配置springboot的启动主函数SpringApplication.run(当前类.class,args)  :启动springboot<br><br><strong>@RestCotroller</strong>  :@Response和@Controller的结合  实例化对象并返回值<br><br><strong>@RequestMapping(“/hello”)</strong>  :springmvc的注解 映射客户端的访问路径2.springboot的配置文件application.properties和application.yaml文件<br><br>注解：<br><br><strong>@Component</strong>   :将当前类交由spring容器管理并实例化<br><br><strong>@ConfigurationProperties(prefix=”person”)</strong>    ：映射配置文件中的person中的值到当前类中  需要先将类交由容器管理次注解才有效<br><br><strong>@ImportResource(location=”classpath:applicationContext.xml”)</strong>  :在主函数的类上配置  主要是将spring配置文件中的配置在springboot中生效<br><br><strong>@PropertySource(“指定的属性文件”)</strong>   ：自定义springboot中的属性文件的映射<br><br><strong>@Configuration  @Bean</strong>   :自定义spring配置文件   并将创建的对象放入容器中  id为该类的方法名</font>
 
-<h2 id="2-application-yml的语法"><a href="#2-application-yml的语法" class="headerlink" title="2.application.yml的语法"></a>2.application.yml的语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line"></span><br><span class="line">     port: 8080   #配置服务端口</span><br><span class="line"></span><br><span class="line">     context-path:/demo  #配置访问路径  如果mapping上写的是/hello，即访问地址为http://                                      localhost：8080/demo/hello</span><br><span class="line"></span><br><span class="line"> spring:</span><br><span class="line"></span><br><span class="line">     profile:</span><br><span class="line"></span><br><span class="line">  	 active: demo   #配置加载demo</span><br><span class="line"></span><br><span class="line"> person：    #配置javabean中的属性的值    list集合和map集合需要在bean中写上泛型</span><br><span class="line"></span><br><span class="line">     name: lili</span><br><span class="line"></span><br><span class="line">     age: 18</span><br><span class="line"></span><br><span class="line">     list:</span><br><span class="line"></span><br><span class="line">    	-a</span><br><span class="line"></span><br><span class="line">    	-b</span><br><span class="line"></span><br><span class="line">     map:</span><br><span class="line"></span><br><span class="line">   	k1: 1</span><br><span class="line"></span><br><span class="line">   	k2: 2</span><br></pre></td></tr></table></figure>
-<h2 id="3-springboot的日志"><a href="#3-springboot的日志" class="headerlink" title="3.springboot的日志"></a>3.springboot的日志</h2><p>springboot默认使用slf4j和logback作为日志的配置，配置属性需要在application.properties文件中设置</p>
-<p>日志的输出打印级别从低到高： trace&lt;debug&lt;info&lt;warn&lt;error</p>
-<p>logging.level.com.springboot=trace   :设置com.springboot包下的打印trace级别以上的日志信息</p>
-<p>logging.path=D:/IDEA/springlogging   :自定义设置日志打印的位置  默认在控制台打印  并默认以spring.log的                文件存储在文件夹下</p>
-<p>logging.file=D:/IDEA/springboot.log  :自定义日志的存储位置和文件名</p>
+<h2 id="2-application-yml的语法"><a href="#2-application-yml的语法" class="headerlink" title="2.application.yml的语法"></a>2.application.yml的语法</h2> <font size="4"><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">server:</span><br><span class="line"></span><br><span class="line">     port: 8080   #配置服务端口</span><br><span class="line"></span><br><span class="line">     context-path:/demo  #配置访问路径  如果mapping上写的是/hello，即访问地址为http://  localhost：8080/demo/hello</span><br><span class="line"></span><br><span class="line"> spring:</span><br><span class="line"></span><br><span class="line">     profile:</span><br><span class="line"></span><br><span class="line">  	 active: demo   #配置加载demo</span><br><span class="line"></span><br><span class="line"> person：    #配置javabean中的属性的值    list集合和map集合需要在bean中写上泛型</span><br><span class="line"></span><br><span class="line">     name: lili</span><br><span class="line"></span><br><span class="line">     age: 18</span><br><span class="line"></span><br><span class="line">     list:</span><br><span class="line"></span><br><span class="line">    	-a</span><br><span class="line"></span><br><span class="line">    	-b</span><br><span class="line"></span><br><span class="line">     map:</span><br><span class="line"></span><br><span class="line">   	k1: 1</span><br><span class="line"></span><br><span class="line">   	k2: 2</span><br></pre></td></tr></table></figure><br><br></font>
 
+<h2 id="3-springboot的日志"><a href="#3-springboot的日志" class="headerlink" title="3.springboot的日志"></a>3.springboot的日志</h2>  <font size="4">springboot默认使用slf4j和logback作为日志的配置，配置属性需要在application.properties文件中设置<br><br>日志的输出打印级别从低到高： trace&lt;debug&lt;info&lt;warn&lt;error<br><br>logging.level.com.springboot=trace   :设置com.springboot包下的打印trace级别以上的日志信息<br><br>logging.path=D:/IDEA/springlogging   :自定义设置日志打印的位置  默认在控制台打印  并默认以spring.log的                文件存储在文件夹下<br><br>logging.file=D:/IDEA/springboot.log  :自定义日志的存储位置和文件名</font>
       
 
       
@@ -505,6 +501,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
@@ -549,10 +549,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">task</a>
               </li>
              
@@ -585,6 +581,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">devtools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">actuator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">exception</a>
               </li>
              
@@ -594,14 +598,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">国际化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">devtools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">actuator</a>
               </li>
             
             <div class="clearfix"></div>

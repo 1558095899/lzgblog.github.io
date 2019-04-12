@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh_Hans">
 <meta property="og:image" content="http://yoursite.com/2019/04/12/springboot-zookeeper-dubbo/1.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/04/12/springboot-zookeeper-dubbo/2.jpg">
-<meta property="og:updated_time" content="2019-04-12T07:51:23.994Z">
+<meta property="og:updated_time" content="2019-04-12T09:38:34.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springboot-zookeeper-dubbo 分布式(十一)">
 <meta name="twitter:description" content="1.使用Zookeeper+Dubbo的方式开发分布式系统。">
@@ -214,12 +214,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-使用Zookeeper-Dubbo的方式开发分布式系统。"><a href="#1-使用Zookeeper-Dubbo的方式开发分布式系统。" class="headerlink" title="1.使用Zookeeper+Dubbo的方式开发分布式系统。"></a>1.使用Zookeeper+Dubbo的方式开发分布式系统。<a id="more"></a></h2><p>下载安装Zookeeper，地址：<a href="http://archive.apache.org/dist/zookeeper/" target="_blank" rel="noopener">http://archive.apache.org/dist/zookeeper/</a>    。解压之后修改</p>
-<p>D:\Zookeeper\zookeeper-3.4.9\conf目录下的<strong>zoo_sample.cfg</strong>文件名为<strong>zoo.cfg</strong>  并修改其中的内容：</p>
-<p><img src="/2019/04/12/springboot-zookeeper-dubbo/1.jpg" alt="img"></p>
-<p>之后双击bin目录下的<strong>zkServer.cmd</strong>启动服务，出现<strong>2181</strong>即可。或者使用cmd命令执行jps查看是否启动。</p>
+        <h2 id="1-使用Zookeeper-Dubbo的方式开发分布式系统。"><a href="#1-使用Zookeeper-Dubbo的方式开发分布式系统。" class="headerlink" title="1.使用Zookeeper+Dubbo的方式开发分布式系统。"></a>1.使用Zookeeper+Dubbo的方式开发分布式系统。<a id="more"></a></h2><font size="4">下载安装Zookeeper，地址：<a href="http://archive.apache.org/dist/zookeeper/" target="_blank" rel="noopener">http://archive.apache.org/dist/zookeeper/</a>    。解压之后修改<br><br>D:\Zookeeper\zookeeper-3.4.9\conf目录下的<strong>zoo_sample.cfg</strong>文件名为<strong>zoo.cfg</strong>  并修改其中的内容：<br><br><img src="/2019/04/12/springboot-zookeeper-dubbo/1.jpg" alt="img"><br><br><br><br>之后双击bin目录下的<strong>zkServer.cmd</strong>启动服务，出现<strong>2181</strong>即可。或者使用cmd命令执行jps查看是否启动。</font>
+
 <p><img src="/2019/04/12/springboot-zookeeper-dubbo/2.jpg" alt="img"></p>
-<h2 id="2-springboot需要引入zkclient和dubbo依赖"><a href="#2-springboot需要引入zkclient和dubbo依赖" class="headerlink" title="2.springboot需要引入zkclient和dubbo依赖"></a>2.springboot需要引入zkclient和dubbo依赖</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--引入dubbo依赖--&gt;</span><br><span class="line"></span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line"></span><br><span class="line">     &lt;groupId&gt;com.alibaba.boot&lt;/groupId&gt;</span><br><span class="line"></span><br><span class="line">     &lt;artifactId&gt;dubbo-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line"></span><br><span class="line">     &lt;version&gt;0.1.0&lt;/version&gt;</span><br><span class="line"></span><br><span class="line"> &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"> &lt;!--引入zookeeper的客户端工具--&gt;</span><br><span class="line"></span><br><span class="line"> &lt;!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient --&gt;</span><br><span class="line"></span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line"></span><br><span class="line">     &lt;groupId&gt;com.github.sgroschupf&lt;/groupId&gt;</span><br><span class="line"></span><br><span class="line">     &lt;artifactId&gt;zkclient&lt;/artifactId&gt;</span><br><span class="line"></span><br><span class="line">     &lt;version&gt;0.1&lt;/version&gt;</span><br><span class="line"></span><br><span class="line"> &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2-springboot需要引入zkclient和dubbo依赖"><a href="#2-springboot需要引入zkclient和dubbo依赖" class="headerlink" title="2.springboot需要引入zkclient和dubbo依赖"></a>2.springboot需要引入zkclient和dubbo依赖</h2><font size="4"><br><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--引入dubbo依赖--&gt;</span><br><span class="line"></span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line"></span><br><span class="line">     &lt;groupId&gt;com.alibaba.boot&lt;/groupId&gt;</span><br><span class="line"></span><br><span class="line">     &lt;artifactId&gt;dubbo-spring-boot-starter&lt;/artifactId&gt;</span><br><span class="line"></span><br><span class="line">     &lt;version&gt;0.1.0&lt;/version&gt;</span><br><span class="line"></span><br><span class="line"> &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"> &lt;!--引入zookeeper的客户端工具--&gt;</span><br><span class="line"></span><br><span class="line"> &lt;!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient --&gt;</span><br><span class="line"></span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line"></span><br><span class="line">     &lt;groupId&gt;com.github.sgroschupf&lt;/groupId&gt;</span><br><span class="line"></span><br><span class="line">     &lt;artifactId&gt;zkclient&lt;/artifactId&gt;</span><br><span class="line"></span><br><span class="line">     &lt;version&gt;0.1&lt;/version&gt;</span><br><span class="line"></span><br><span class="line"> &lt;/dependency&gt;</span><br></pre></td></tr></table></figure><br><br></font>
+
 <h2 id="3-在配置文件中配置Dubbo的项目名称name、发布注册的地址address和发布服务的类所在的包base-package"><a href="#3-在配置文件中配置Dubbo的项目名称name、发布注册的地址address和发布服务的类所在的包base-package" class="headerlink" title="3.在配置文件中配置Dubbo的项目名称name、发布注册的地址address和发布服务的类所在的包base-package"></a>3.在配置文件中配置Dubbo的项目名称name、发布注册的地址address和发布服务的类所在的包base-package</h2><blockquote>
 <p>#配置dubbo的name  name为当前项目的名称<br>dubbo.application.name=springboot-server<br>#配置发布服务的地址  即zookeeper的默认端口为2181<br>dubbo.registry.address=zookeeper://127.0.0.1:2181<br>#配置dubbo的扫描包   扫描dubbo发布服务的包<br>dubbo.scan.base-packages=com.springboot.service </p>
 </blockquote>
@@ -516,6 +515,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
@@ -560,10 +563,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">task</a>
               </li>
              
@@ -596,6 +595,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">devtools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">actuator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">exception</a>
               </li>
              
@@ -605,14 +612,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">国际化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">devtools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">actuator</a>
               </li>
             
             <div class="clearfix"></div>

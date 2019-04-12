@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/04/12/关于配置springboot国际化问题/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/12/关于配置springboot国际化问题/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/12/关于配置springboot国际化问题/3.png">
-<meta property="og:updated_time" content="2019-04-12T08:16:42.600Z">
+<meta property="og:updated_time" content="2019-04-12T09:32:13.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于配置springboot国际化问题">
 <meta name="twitter:description" content="使用springboot版本为1.5.9出现的问题">
@@ -222,7 +222,8 @@
 <blockquote>
 <p>spring.messages.basename=i18n.login</p>
 </blockquote>
-<h2 id="3-页面"><a href="#3-页面" class="headerlink" title="3.页面"></a>3.页面</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 class=&quot;h3 mb-3 font-weight-normal&quot; th:text=&quot;#&#123;login.top&#125;&quot;&gt;Please sign in&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line"> &lt;label class=&quot;sr-only&quot; th:text=&quot;#&#123;login.username&#125;&quot;&gt;Username&lt;/label&gt;</span><br><span class="line"></span><br><span class="line"> &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot; th:placeholder=&quot;#&#123;login.username&#125;&quot; required=&quot;&quot; autofocus=&quot;&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;label class=&quot;sr-only&quot; th:text=&quot;#&#123;login.password&#125;&quot;&gt;Password&lt;/label&gt;</span><br><span class="line"></span><br><span class="line"> &lt;input type=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot; th:placeholder=&quot;#&#123;login.password&#125;&quot; required=&quot;&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;div class=&quot;checkbox mb-3&quot;&gt;</span><br><span class="line"></span><br><span class="line">       &lt;label&gt;</span><br><span class="line"></span><br><span class="line">        &lt;input type=&quot;checkbox&quot; value=&quot;remember-me&quot; &gt;[[#&#123;login.remember&#125;]]</span><br></pre></td></tr></table></figure>
+<h2 id="3-页面"><a href="#3-页面" class="headerlink" title="3.页面"></a>3.页面</h2><font size="4"><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 class=&quot;h3 mb-3 font-weight-normal&quot; th:text=&quot;#&#123;login.top&#125;&quot;&gt;Please sign in&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line"> &lt;label class=&quot;sr-only&quot; th:text=&quot;#&#123;login.username&#125;&quot;&gt;Username&lt;/label&gt;</span><br><span class="line"></span><br><span class="line"> &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot; th:placeholder=&quot;#&#123;login.username&#125;&quot; required=&quot;&quot; autofocus=&quot;&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;label class=&quot;sr-only&quot; th:text=&quot;#&#123;login.password&#125;&quot;&gt;Password&lt;/label&gt;</span><br><span class="line"></span><br><span class="line"> &lt;input type=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot; th:placeholder=&quot;#&#123;login.password&#125;&quot; required=&quot;&quot;&gt;</span><br><span class="line"></span><br><span class="line"> &lt;div class=&quot;checkbox mb-3&quot;&gt;</span><br><span class="line"></span><br><span class="line">       &lt;label&gt;</span><br><span class="line"></span><br><span class="line">        &lt;input type=&quot;checkbox&quot; value=&quot;remember-me&quot; &gt;[[#&#123;login.remember&#125;]]</span><br></pre></td></tr></table></figure><br><br></font>
+
 <h2 id="4-浏览器显示"><a href="#4-浏览器显示" class="headerlink" title="4.浏览器显示"></a>4.浏览器显示</h2><p><img src="/2019/04/12/关于配置springboot国际化问题/2.png" alt="img"></p>
 <p>由于basename在1.5.9版本中似乎无法识别“.”,需要把application.properties’文件改成</p>
 <blockquote>
@@ -516,6 +517,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
@@ -560,10 +565,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">task</a>
               </li>
              
@@ -596,6 +597,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">devtools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">actuator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">exception</a>
               </li>
              
@@ -605,14 +614,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">国际化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">devtools</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">actuator</a>
               </li>
             
             <div class="clearfix"></div>
